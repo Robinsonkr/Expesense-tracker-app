@@ -1,0 +1,270 @@
+.app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #e5e7eb;
+}
+
+.app-header {
+  padding: 1.5rem 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.app-header p {
+  margin: 0.5rem 0 0;
+  color: #9ca3af;
+}
+
+.app-main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.middle-section,
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
+}
+
+.card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+.form-card .form-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+input,
+select {
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.full-width {
+  margin-bottom: 0.9rem;
+}
+
+.primary-btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(to right, #3b82f6, #22c55e);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.error {
+  color: #fecaca;
+  background: rgba(127, 29, 29, 0.4);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters select {
+  font-size: 0.8rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 0.5rem 0.5rem;
+  text-align: left;
+}
+
+thead th {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+tbody tr:hover {
+  background: rgba(30, 64, 175, 0.4);
+}
+
+.amount-col {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.ghost-btn {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 999px;
+}
+
+.ghost-btn:hover {
+  background: rgba(148, 163, 184, 0.2);
+  color: #fca5a5;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+.summary-card .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.summary-item {
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.75rem;
+  background: radial-gradient(circle at top left, #1e293b, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.summary-item .label {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.summary-item .value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.chart-card canvas {
+  max-height: 260px;
+}
+
+.app-footer {
+  padding: 0.8rem 1.5rem 1.2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  .top-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .summary-card .summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem 1.1rem;
+  }
+
+  .form-card .form-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
